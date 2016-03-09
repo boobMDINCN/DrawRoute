@@ -10,29 +10,11 @@ import com.baidu.mapapi.SDKInitializer;
 public class MyApp extends Application {
 
 
-//    LocationClient mLocationClient ;
 
     @Override
     public void onCreate() {
         super.onCreate();
-//        initMapOpt() ;
         SDKInitializer.initialize(this);
     }
 
-
-//    private void initMapOpt(){
-//        try{
-//            SDKInitializer.initialize(this );
-//            mLocationClient = new LocationClient(this );
-//            LocationClientOption option = new LocationClientOption();
-//            option.setLocationMode(LocationClientOption.LocationMode.Battery_Saving);
-//            option.setCoorType("bd09ll");
-//            option.setScanSpan(5000);
-//            option.setIsNeedAddress(true);
-//            option.setOpenGps(true);
-//            mLocationClient.setLocOption(option);
-//        }catch (Throwable t){
-//            t.printStackTrace();
-//        }
-//    }
 }
