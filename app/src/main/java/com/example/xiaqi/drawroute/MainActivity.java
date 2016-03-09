@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        mHandler =  new MyHandler() ;
         mMapView = (MapView) findViewById(R.id.map_view);
         mMapView.onResume();
         startParser();
@@ -99,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                         eventType = xmlPullParser.next();
                     }
-                    mHandler =  new MyHandler() ;
                     mHandler.sendEmptyMessage(0);
                 } catch (XmlPullParserException e) {
                     e.printStackTrace();
