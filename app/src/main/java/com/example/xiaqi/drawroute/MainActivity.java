@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         });
         mMapView = (MapView) findViewById(R.id.map_view);
         mMapView.onResume();
-        BaiduMap map = mMapView.getMap();
         startParser();
     }
 
@@ -100,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         eventType = xmlPullParser.next();
                     }
+                    mHandler =  new MyHandler() ;
                     mHandler.sendEmptyMessage(0);
                 } catch (XmlPullParserException e) {
                     e.printStackTrace();
